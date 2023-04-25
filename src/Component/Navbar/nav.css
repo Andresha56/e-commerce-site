@@ -1,0 +1,72 @@
+
+
+.nav--bar{
+    background-color:#232B2B;
+    color:#ffffff;
+}
+
+.nav--bar .logo a{
+    font-size:2rem;
+}
+.nav--bar a{
+    color:#ffffff;
+}
+
+.nav--bar .d-flex{
+    justify-content:space-between;
+}
+.nav--bar .nav-search{
+    width:30%;
+}
+.nav--bar .nav-search input{
+    width:100%;
+    padding:0.5rem 1rem;
+}
+.nav--bar .nav--select-address span{
+    font-size:1.3rem;
+}
+.nav--bar .nav--select-address a{
+    font-size:1.5rem;
+}
+.nav--bar .nav-auth-add-cart{
+    display:flex;
+    align-items:center;
+    font-weight:bolder;
+}
+.nav--add-to-cart p{
+    font-size:1.6rem;
+}
+
+.nav--bar .nav-authentication  button{
+    background-color:#ffffff;
+    border:0;
+    outline:0;
+    padding:0.6rem 1rem;
+    border-radius:4px;
+    margin-left:4rem;
+    font-size:1.6rem;
+    font-weight:500;
+    cursor:pointer;
+}
+.CartNumber-flex-col{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    font-size:1.3rem;
+    margin-bottom: 1.5rem;
+}
+.CartNumber-flex-col .cart-num{
+    margin-bottom: -0.6rem;
+}
+
+/* ------------header----items---------- */
+
+
+.header--items {
+    background-color:#1A2228;
+    padding:1.5rem 0;
+}
+.header--items a{
+    margin-right:3rem;
+    font-size:1.3rem;
+}

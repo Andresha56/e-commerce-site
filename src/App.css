@@ -1,0 +1,27 @@
+
+/* -------------global-------values------------------- */
+html{
+  font-size:62.5%;
+}
+.wrapper{
+  width:90%;
+  max-width:1600px;
+  margin:auto;
+}
+
+.d-flex{
+  display:flex;
+  align-items:center;
+}
+
+li{
+  list-style-type:none;
+}
+a{
+  text-decoration:none;
+}
+input{
+  border:0;
+  border-radius:2px;
+  outline:0;
+}
