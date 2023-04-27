@@ -25,8 +25,12 @@
 .nav--bar .nav--select-address span{
     font-size:1.3rem;
 }
-.nav--bar .nav--select-address a{
+.nav--bar .nav--select-address button{
     font-size:1.5rem;
+    background-color:transparent;
+    color:#ffffff;
+    border:0;
+    
 }
 .nav--bar .nav-auth-add-cart{
     display:flex;
