@@ -1,16 +1,16 @@
 import "./nav.css";
 import { AiOutlineShoppingCart } from "react-icons/ai";
-import { GrLocation } from "react-icons/gr";
+import { GoLocation } from "react-icons/go";
 import { useAuth0 } from "@auth0/auth0-react";
 import HeaderItems from "./HeaderItems";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
-function Nav() {
+function Nav({updatedCart}) {
   const { loginWithRedirect, logout } = useAuth0();
   const { user, isAuthenticated, isLoading } = useAuth0();
   // const [clickedAccessLocation, setClickedAccessLocation] = useState(false);
   const [userLocation, setUserLocation] = useState(null);
-  const [cartNumber, setCartNumber] = useState(0);
+ 
 
 
   const  AccessLocation =()=> {
@@ -23,11 +23,11 @@ function Nav() {
           lon : response.coords.longitude
         });
   
-          if(userLocation ===null){
-            console.log("Nhi Mila")
+          if(userLocation === null){
+            console.log( "Nhi Mila" )
           }else{
-            console.log("Milgaya")
-            console.log(userLocation)
+            console.log( "Milgaya" )
+            console.log( userLocation )
           }
       },
 
@@ -47,23 +47,23 @@ function Nav() {
       <header className="nav--bar">
         <div className="wrapper d-flex">
           <div className="logo">
-            <a href="./">Sopify</a>
+            <a href="./">Soopify</a>
           </div>
           <ul className="nav--select-address">
             {isAuthenticated ? (
               <li>
                 <button onClick={AccessLocation}>
-                  <GrLocation size={27} color="#ffffff" />
-                  <span>hello</span> {user.name}
-                  <br></br>Select your address click
+                  <GoLocation size={25} color="#ffffff" />
+                  <span>hello {user.name}</span>
+                  <br></br>Select your address 
                 </button>
               </li>
             ) : (
               <li>
                 <button>
-                  <GrLocation size={27} color="#ffffff" />
-                  <span>hello</span> {user.name}
-                  <br></br>Select your address click
+                  <GoLocation size={25} color="#ffffff" />
+                  <span>hello</span> 
+                  <br></br>Select your address 
                 </button>
               </li>
             )}
@@ -71,13 +71,13 @@ function Nav() {
           <div className="nav-search">
             <input
               type="search"
-              placeholder="search in sopify"
+              placeholder="search in soopify"
               name="nav-search"
             />
           </div>
           <div className="nav--add-to-cart nav-auth-add-cart">
             <div className="CartNumber-flex-col">
-              <div className="cart-num">{cartNumber}</div>
+              <div className="cart-num">{updatedCart}</div>
               <AiOutlineShoppingCart size={30} color="#ffffff" />
             </div>
             <p>Cart</p>

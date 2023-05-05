@@ -1,0 +1,15 @@
+
+
+.carousel-con{
+    margin-top:0;
+}
+.carousel-con .carousel-img-con{
+    width:100%;
+    height:100%;
+}
+.carousel-con .carousel-img-con img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
